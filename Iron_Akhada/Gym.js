@@ -1,10 +1,14 @@
 function sendMail(params){
-    var tempParams={
-        from_name:"Jayant",
-        to_name:document.getElementById("name").ariaValueMax,
-        message:"Thank you for Joining and we will try our best on your fitness."
-    };
-    emailjs.send("service_114ztc3","template_58geag7",tempParams).then(function(res){console.log("Success",res.status)});
+ 
+  
+  var temParams={
+      from_name: "Jayant Bhadauria",
+      to_name: document.getElementById("validationCustom01").value,
+      msg: "Thank for Registring , we will send your confirmation letter soon.",
+  };
+  emailjs.send('service_114ztc3','template_58geag7',temParams).then(function(res){
+      console.log("Success",res.status);
+  });
 }
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
